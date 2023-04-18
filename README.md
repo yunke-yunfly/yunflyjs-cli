@@ -7,7 +7,7 @@
 - install
 
 ```shell
-yarn add –g @yunflyjs/yunfly-cli
+yarn global add @yunflyjs/yunfly-cli
 ```
 
 - init template
