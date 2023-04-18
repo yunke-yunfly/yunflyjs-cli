@@ -19,7 +19,7 @@ export default function genPackageJson(option: Option) {
     "compile": "tsc -p ."
   },
   "dependencies": {
-    "@yunflyjs/yunfly": "*"
+    "@yunflyjs/yunfly": "latest"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
