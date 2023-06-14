@@ -1,0 +1,36 @@
+{
+  "name": "@yunflyjs/yunfly-cli",
+  "version": "0.0.4",
+  "main": "./dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "gts clean && tsc",
+    "dev": "tsc --watch"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "engines": {
+    "node": ">=10.13.0"
+  },
+  "bin": {
+    "yunfly-cli": "./bin/index.js"
+  },
+  "files": [
+    "bin",
+    "dist"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "fs-extra": "^10.0.0",
+    "inquirer": "8.0.0",
+    "shelljs": "^0.8.5"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "gts": "^3.1.1",
+    "typescript": "^5.0.4"
+  }
+}
