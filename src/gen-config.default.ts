@@ -33,6 +33,49 @@ const config = () => {
     }
   };
 
+  // body-parser config
+  config.bodyParser = {
+    enable: true,
+    jsonLimit: '5mb',
+    formLimit: '5mb',
+    queryString: {
+      parameterLimit: 5 * 1024 * 1024,
+    },
+  };
+
+  // error config
+  config.error = {
+    enable: true,
+
+    // use yunfly default error log.
+    useYunflyLog: true,
+
+    /**
+     * error code
+     * Type: number | true | Record<Key, Key>
+     */
+    errCode: true,
+
+    // enable http state
+    enableHttpCode: false,
+
+    // enable rpc error message
+    useRpcErrorMessage: true,
+
+    // enable return rpc error message
+    showMessageDetail: true,
+
+    /* Customize your error fn. （Optional） */
+    // customError: async (err: any, ctx: Context) => {}
+
+    unhandledRejection: (err: any) => {
+      console.error('UnhandledRejection error, at time', Date.now(), 'reason:', err);
+    },
+    uncaughtException: (err: any) => {
+      console.error('uncaughtException error, at time', Date.now(), 'reason:', err);
+    },
+  };
+
   return config;
 };
 
